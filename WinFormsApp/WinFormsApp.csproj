@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6890DE0C-096B-4452-890F-42E3737E26A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WinFormsApp</RootNamespace>
+    <AssemblyName>WinFormsApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ctrlMatch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlMatch.Designer.cs">
+      <DependentUpon>ctrlMatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlPlayerForOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlPlayerForOrder.Designer.cs">
+      <DependentUpon>ctrlPlayerForOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FavouriteNation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FavouriteNation.Designer.cs">
+      <DependentUpon>FavouriteNation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Localization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Localization.Designer.cs">
+      <DependentUpon>Localization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickPlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickPlayers.Designer.cs">
+      <DependentUpon>PickPlayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlPlayerForFav.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlPlayerForFav.Designer.cs">
+      <DependentUpon>ctrlPlayerForFav.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preconditions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="RangLists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RangLists.Designer.cs">
+      <DependentUpon>RangLists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ctrlMatch.resx">
+      <DependentUpon>ctrlMatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlPlayerForOrder.resx">
+      <DependentUpon>ctrlPlayerForOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FavouriteNation.hr.resx">
+      <DependentUpon>FavouriteNation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FavouriteNation.resx">
+      <DependentUpon>FavouriteNation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization.resx">
+      <DependentUpon>Localization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickPlayers.hr.resx">
+      <DependentUpon>PickPlayers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickPlayers.resx">
+      <DependentUpon>PickPlayers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlPlayerForFav.resx">
+      <DependentUpon>ctrlPlayerForFav.cs</DependentUpon>
+    </EmbeddedResource>
+    <AdditionalFiles Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <EmbeddedResource Include="RangLists.hr.resx">
+      <DependentUpon>RangLists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RangLists.resx">
+      <DependentUpon>RangLists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.hr.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FMClassLib\FMClassLib.csproj">
+      <Project>{29F05C5F-427A-4B0C-AEB8-1274E5A81795}</Project>
+      <Name>FMClassLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caret-arrow-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppSetting.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

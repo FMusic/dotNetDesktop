@@ -1,0 +1,155 @@
+﻿<Window x:Class="WpfApp.Match"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        xmlns:p = "clr-namespace:WpfApp.Properties"
+        Title="Match" Height="450" Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               Content="{x:Static p:Resources.strHome}"/>
+        <ComboBox Grid.Column="1"
+                  Name="cbCountries"
+                  VerticalAlignment="Center"
+                  SelectionChanged="CbCountries_SelectionChanged"
+                  
+                  />
+        <Label VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               Content="0"
+               Grid.Column="2"
+               FontSize="40"
+               FontWeight="ExtraBold"
+               Name="lblResultHome"
+               />
+        <Label VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               Content="VS"
+               Grid.Column="3"
+               Grid.ColumnSpan="2"
+               FontSize="30"
+               FontWeight="ExtraBlack"
+               Foreground="Red"
+               />
+        <Label VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               Content="{x:Static p:Resources.strAway}"
+               Grid.Column="7"
+               />
+        <ComboBox Grid.Column="6"
+                  Name="cbCountriesAway"
+                  VerticalAlignment="Center"
+                  SelectionChanged="CbCountriesAway_SelectionChanged"
+                  />
+        <Label VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               Content="0"
+               Grid.Column="5"
+               FontSize="40"
+               FontWeight="ExtraBold"
+               Name="lblResultAway"
+               />
+        <Grid Grid.Row="1"
+              Grid.ColumnSpan="8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Name="spGoalHome"
+                    Orientation="Vertical"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                    />
+            <StackPanel Name="spDefendHome"
+                    Orientation="Vertical"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                    />
+            <StackPanel Name="spMiddleHome"
+                    Orientation="Vertical"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                    />
+            <StackPanel Name="spAttackHome"
+                    Orientation="Vertical"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                    />
+            <StackPanel Name="spAttackAway"
+                    Orientation="Vertical"
+                    Grid.Row="1"
+                    Grid.Column="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                    />
+            <StackPanel Name="spMiddleAway"
+                    Orientation="Vertical"
+                    Grid.Row="1"
+                    Grid.Column="5"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                    />
+            <StackPanel Name="spDefendAway"
+                    Orientation="Vertical"
+                    Grid.Row="1"
+                    Grid.Column="6"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                    />
+            <StackPanel Name="spGoalAway"
+                    Orientation="Vertical"
+                    Grid.Row="1"
+                    Grid.Column="7"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                    />
+            
+            <Grid.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="C:\Users\FraneMušić\Desktop\FraneMusicOOP.NETpraktikum\field.jpg"/>
+            </Grid.Background>
+        </Grid>
+
+        <Button VerticalAlignment="Top"
+                    HorizontalAlignment="Center"
+                    Name="btnSettings"
+                    Click="BtnSettings_Click"
+                    Grid.Column="7"
+                    Content="Settings"
+                    />
+    </Grid>
+</Window>

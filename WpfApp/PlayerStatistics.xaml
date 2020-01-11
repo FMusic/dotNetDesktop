@@ -1,0 +1,110 @@
+﻿<Window x:Class="WpfApp.PlayerStatistics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        xmlns:p = "clr-namespace:WpfApp.Properties"
+        mc:Ignorable="d"
+        Title="PlayerStatistics" Height="300" Width="350">
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation
+                            Storyboard.TargetProperty="Height"
+                            From="0"
+                            To="500"
+                            Duration="0:0:0.5"
+                            FillBehavior="HoldEnd"
+                            AutoReverse="False"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Window.Triggers>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0"
+               Grid.Row="0"
+               Name="picPlayer"
+               />
+        <Label Grid.Column="0"
+               Grid.Row="1"
+               Content="{x:Static p:Resources.strGoals}"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Name="lblGoals"
+               />
+        <Label Grid.Column="0"
+               Grid.Row="1"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Name="lblGoalsNum"
+               FontSize="20"
+               FontWeight="ExtraBold"
+               />
+        <Label Grid.Column="1"
+               Grid.Row="1"
+               Content="{x:Static p:Resources.strCards}"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Name="lblCards"
+               />
+        <Label Grid.Column="1"
+               Grid.Row="1"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Name="lblCardsNum"
+               FontSize="15"
+               FontWeight="DemiBold"
+               />
+        <Label Grid.Column="1"
+               Grid.Row="0"
+               HorizontalAlignment="Center"
+               Name="lblName"
+               VerticalAlignment="Top"
+               Content="IME I PREZIME"
+               FontSize="25"
+               
+               />
+        <Label Grid.Column="1"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Content="Captain"
+               Visibility="Hidden"
+               Name="lblCaptain"
+               />
+        <Button Grid.Column="0"
+                Grid.Row="2"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Content="{x:Static p:Resources.strSetPic}"
+                Name="btnPicture"
+                Click="BtnPicture_Click"
+                Width="75"
+                />
+        <Button Grid.Column="0"
+                Grid.Row="2"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Name="btnExit"
+                Click="BtnExit_Click"
+                Content="{x:Static p:Resources.strClose}"
+                Width="75"
+                />
+
+    </Grid>
+</Window>
